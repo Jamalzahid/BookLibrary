@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/sortOptionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnSortTitleAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title (A to Z)" />
+
+        <Button
+            android:id="@+id/btnSortTitleDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title ( Z to A)" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sort2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sortOptionsLayout">
+
+        <Button
+            android:id="@+id/btnSortAuthorAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author (A to Z)" />
+
+        <Button
+            android:id="@+id/btnSortAuthorDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author (Z to A)" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sort3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sort2">
+
+        <Button
+            android:id="@+id/btnSortPublicationYearAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publication Year Asc" />
+
+        <Button
+            android:id="@+id/btnSortPublicationYearDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publication Year Desc" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sort4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sort3">
+
+        <Button
+            android:id="@+id/btnSortGenreAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genre (A to Z)" />
+
+        <Button
+            android:id="@+id/btnSortGenreDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genre (Z to A)" />
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sort4"
+        android:layout_margin="8dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search books..." />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchView"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>
